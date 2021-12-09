@@ -377,8 +377,7 @@ a:hover {
     text-shadow: black 0px 0px 3px;
     color: white;
     font-size: 19px;
-    display: flex;
-    align-items: flex-start;
+    text-align: start;
     padding-left: 5%;
 }
 
@@ -387,9 +386,12 @@ a:hover {
     text-shadow: 0px 0px ;
     padding-left: 0px;
     display: flex;
+    margin-top: 10px;
+    flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
 }
+
 
 #bloc-5-cta{
     display: flex;
@@ -397,7 +399,25 @@ a:hover {
     height: 300px;
 }
 
+@media (max-width: 768px){
+.footer-partenaires{
+    flex-direction: column;
+    text-shadow: black 0px 0px 3px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    padding-left: 5%;
+    padding-top: 20px;
+}
+.footer-partenaires ul{
+    flex-direction: column!important;
+    align-items: center;
+    font-size: 19px;
+}
+}
 @media (min-width: 768px) {
+    
+
     .site-navigation {
         position: absolute;
         top: 50%;
@@ -744,8 +764,10 @@ h5{
 }
 
 .social {
-    padding: 5px 0px 5px 0px;
+    display: flex;
+    padding: 5px 8px 5px 0px;
     width: 100%;
+    justify-content: center;
     padding-bottom: 5px;
     flex-direction: row;
     margin: auto auto auto auto;
